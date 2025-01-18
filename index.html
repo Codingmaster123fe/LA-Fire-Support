@@ -4,35 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LA Fire Support - Resources for Fire Victims</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #d32f2f;
+            --secondary-color: #ff6659;
+            --text-color: #333;
+            --bg-color: #f5f5f5;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
         }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .resource-section {
-            margin: 20px 0;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        h1 {
-            color: #d32f2f;
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 40px 20px;
             text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .resource-section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .resource-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .resource-section h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.5em;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 15px 0;
+            padding: 10px;
+            background: #f8f8f8;
+            border-radius: 8px;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        .emergency-banner {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="emergency-banner">
+        🚨 For immediate emergency assistance, call 911 🚨
+    </div>
+
+    <header class="header">
         <h1>LA Fire Support Resources</h1>
-        
+        <p>Supporting our community during fire emergencies</p>
+    </header>
+
+    <div class="container">
         <div class="resource-section">
-            <h2>Emergency Contacts</h2>
+            <h2>📞 Emergency Contacts</h2>
             <ul>
                 <li>Emergency: 911</li>
                 <li>LA Fire Department: (213) 978-3800</li>
@@ -42,7 +128,7 @@
         </div>
 
         <div class="resource-section">
-            <h2>Shelter Locations</h2>
+            <h2>🏠 Shelter Locations</h2>
             <ul>
                 <li>Red Cross Shelter Finder: <a href="https://www.redcross.org/get-help/disaster-relief-and-recovery-services/find-an-open-shelter.html">Find Shelter</a></li>
                 <li>LA City Emergency Shelter Information: 311</li>
@@ -50,7 +136,7 @@
         </div>
 
         <div class="resource-section">
-            <h2>Financial Assistance</h2>
+            <h2>💰 Financial Assistance</h2>
             <ul>
                 <li>FEMA Disaster Assistance: <a href="https://www.disasterassistance.gov/">Apply Online</a> or call 1-800-621-3362</li>
                 <li>California Disaster Relief: <a href="https://www.cdss.ca.gov/disaster-help">State Resources</a></li>
@@ -58,7 +144,7 @@
         </div>
 
         <div class="resource-section">
-            <h2>Medical Support</h2>
+            <h2>🏥 Medical Support</h2>
             <ul>
                 <li>LA County Health Services: (213) 240-8101</li>
                 <li>Mental Health Support: (800) 854-7771</li>
@@ -66,7 +152,7 @@
         </div>
 
         <div class="resource-section">
-            <h2>Pet & Animal Services</h2>
+            <h2>🐾 Pet & Animal Services</h2>
             <ul>
                 <li>LA Animal Services: (888) 452-7381</li>
                 <li>Pet Emergency Hotline: (213) 485-4392</li>
